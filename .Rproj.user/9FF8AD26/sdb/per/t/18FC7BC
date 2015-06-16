@@ -1,0 +1,18 @@
+{
+    "contents" : "library(rvest)\n\np1 <- read_html('https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=heart+rate+variability+analysis')\n\ngetTitles<- p1 %>%\n  html_nodes(\".gs_rt\") %>%\n  html_text()\n\ngetLinks<- p1 %>%\n  html_nodes(\".gs_rt a\") %>%\n  html_attr(\"href\")\n\ngetShortAbstract<- p1 %>%\n  html_nodes(\".gs_rs\") %>%\n  html_text()\n\n\nresult <- data.frame(title=getTitles,link=getLinks,ShortAbstract=getShortAbstract)",
+    "created" : 1434441198522.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "691007464",
+    "id" : "18FC7BC",
+    "lastKnownWriteTime" : 1434454300,
+    "path" : "~/GitHub/RgScholar/RgScholar.R",
+    "project_path" : "RgScholar.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

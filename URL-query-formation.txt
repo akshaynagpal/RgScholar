@@ -1,0 +1,17 @@
+
+heart rate
+https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=heart+rate
+
+heart rate articles between 2014 and 2015
+https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=heart+rate&as_ylo=2014&as_yhi=2015
+
+heart rate articles since 2014
+https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=heart+rate&as_ylo=2014
+
+heart rate articles from 1990-2015 in Pubmed journal
+https://scholar.google.co.in/scholar?q=heart+rate&as_publication=pubmed&as_ylo=1990&as_yhi=2015&hl=en
+
+
+Notes:
+as_vis=1 : without citations
+hl=en    : english language

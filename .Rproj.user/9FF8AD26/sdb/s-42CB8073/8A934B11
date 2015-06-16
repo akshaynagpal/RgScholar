@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# mjar\n[![Build Status](https://travis-ci.org/akshaynagpal/mjar.svg)](https://travis-ci.org/akshaynagpal/mjar)    \n\nSearch/access [The Medical Journal of Australia's](https://www.mja.com.au) database of journals using web scraping in R.\n\n##Installation\n`library(devtools)`\n\n`install_github('akshaynagpal/mjar')`\n##Usage\n`my_query <- search_MJA(\"heart rate\")`\n\nThis will provide the output in the form of a `data.frame` containing 3 columns - `titles, links, abstracts` of top 10 articles matching the user input (\"heart rate\" in above example).\n\n###Selecting from the matrix\nUsing basic matrix access syntax of R, you can access specific information from the matrix returned in the variable (`my_query` in this case)\n* To select all the titles, you can use `my_query[,c('title')]`\n\n* To select all the titles and abstracts from the search resull, you can use `my_query[,c('title','abstract')]`\n\n* To select title and link from the second row, you can use `my_query[2,c('title','abstract')]`\n\n##Copyright\n>\n>The MIT License (MIT)\n>\n>Copyright (c) 2015 Akshay Nagpal\n>\n>Permission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n>\n>The above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n>\n>THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "created" : 1434444830251.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "110266574",
+    "id" : "8A934B11",
+    "lastKnownWriteTime" : 1434445198,
+    "path" : "~/GitHub/mjar/README.md",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "markdown"
+}

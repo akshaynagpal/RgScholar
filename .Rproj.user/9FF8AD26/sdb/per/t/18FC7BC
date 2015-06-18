@@ -1,12 +1,12 @@
 {
-    "contents" : "library(rvest)\n\np1 <- read_html('https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=heart+rate+variability+analysis')\n\ngetTitles<- p1 %>%\n  html_nodes(\".gs_rt\") %>%\n  html_text()\n\ngetLinks<- p1 %>%\n  html_nodes(\".gs_rt a\") %>%\n  html_attr(\"href\")\n\ngetShortAbstract<- p1 %>%\n  html_nodes(\".gs_rs\") %>%\n  html_text()\n\n\nresult <- data.frame(title=getTitles,link=getLinks,ShortAbstract=getShortAbstract)",
+    "contents" : "library(rvest)\n\ngoogle_Scholar <- function(user_query,year_low=NULL,year_high=NULL,journal=NULL){\n  user_query_CLEAN <- gsub(\"^ *|(?<= ) | *$\", \"\", tolower(user_query), perl=T)  #removing multiple spaces\n  user_query_for_URL <- gsub(\" \",\"+\",user_query_CLEAN)        #replacing space with + for URL\n  base_URL <- \"https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=\"\n  query_URL <- paste(base_url,user_query_for_url,sep=\"\")\n  \n  if(!is.null(journal)){\n    journal_CLEAN <- gsub(\"^ *|(?<= ) | *$\", \"\", tolower(journal), perl=T)  #removing multiple spaces\n    journal_for_URL <- gsub(\" \",\"+\",journal_CLEAN)        #replacing space with + for URL\n    query_URL <- paste(query_URL,\"&as_publication=\",journal_for_URL,sep=\"\")\n  }\n  \n  if(!is.null(year_low)){\n    query_URL <- paste(query_URL,\"&as_ylo=\",year_low)\n  }\n  \n  if(!is.null(year_high)){\n    query_URL <- paste(query_URL,\"&as_yhi=\",year_high)\n  }\n} \n\n\n\n\np1 <- read_html('https://scholar.google.co.in/scholar?as_vis=1&hl=en&q=heart+rate+variability+analysis')\n\ngetTitles<- p1 %>%\n  html_nodes(\".gs_rt\") %>%\n  html_text()\n\ngetLinks<- p1 %>%\n  html_nodes(\".gs_rt a\") %>%\n  html_attr(\"href\")\n\ngetShortAbstract<- p1 %>%\n  html_nodes(\".gs_rs\") %>%\n  html_text()\n\n\nresult <- data.frame(title=getTitles,link=getLinks,ShortAbstract=getShortAbstract)",
     "created" : 1434441198522.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "691007464",
+    "hash" : "3123349460",
     "id" : "18FC7BC",
-    "lastKnownWriteTime" : 1434454300,
+    "lastKnownWriteTime" : 1434607995,
     "path" : "~/GitHub/RgScholar/RgScholar.R",
     "project_path" : "RgScholar.R",
     "properties" : {

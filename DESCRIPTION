@@ -1,0 +1,8 @@
+Package: RgScholar
+Title: Google Scholar API in R
+Version: 1.0
+Authors@R: person("Akshay", "Nagpal", email = "akshay2626@gmail.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph)
+Depends: R (>= 3.2.0),rvest
+License: MIT
+LazyData: true

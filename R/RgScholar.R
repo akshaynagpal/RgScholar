@@ -33,15 +33,15 @@ google_Scholar <- function(user_query,year_low=NULL,year_high=NULL,journal=NULL)
   }
   print(query_URL)
   HTML_from_query_URL <- read_html(query_URL)
-  
+  # getting titles
   getTitles<- HTML_from_query_URL %>%
     html_nodes(".gs_rt") %>%
     html_text()
-  
+  #getting links
   getLinks<- HTML_from_query_URL %>%
     html_nodes(".gs_rt a") %>%
     html_attr("href")
-  
+  #getting short abstracts
   getShortAbstract<- HTML_from_query_URL %>%
     html_nodes(".gs_rs") %>%
     html_text()
@@ -49,10 +49,5 @@ google_Scholar <- function(user_query,year_low=NULL,year_high=NULL,journal=NULL)
   
   return(result)
 } 
-
-
-
-
-
 
 

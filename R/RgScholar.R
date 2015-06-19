@@ -45,7 +45,7 @@ google_Scholar <- function(user_query,year_low=NULL,year_high=NULL,journal=NULL)
   getShortAbstract<- HTML_from_query_URL %>%
     html_nodes(".gs_rs") %>%
     html_text()
-  result <- data.frame(title=getTitles,link=getLinks,ShortAbstract=getShortAbstract)
+  result <- data.frame(title=getTitles,link=getLinks,shortAbstract=getShortAbstract)
   
   return(result)
 } 

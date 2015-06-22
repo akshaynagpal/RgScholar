@@ -17,7 +17,7 @@ google_Scholar(user_query, year_low = NULL, year_high = NULL,
 \item{journal}{Limit search to a specific journal (optional).    Default value = NULL}
 }
 \value{
-\code{result} dataframe having titles, links and short abstracts of the research papers matching \code{user_query}
+An object of type dataframe having titles, links and short abstracts of the research papers matching \code{user_query}
 }
 \description{
 Function to search Google Scholar for research papers

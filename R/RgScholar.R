@@ -7,7 +7,7 @@ library(rvest)
 #'@param year_low Lower limit of the year filter (optional). Default Value = NULL
 #'@param year_high Upper limit of the year filter (optional).    Default Value = NULL
 #'@param journal Limit search to a specific journal (optional).    Default value = NULL
-#'@return \code{result} dataframe having titles, links and short abstracts of the research papers matching \code{user_query}
+#'@return An object of type dataframe having titles, links and short abstracts of the research papers matching \code{user_query}
 #'@examples 
 #'google_Scholar("heart rate") #without filters
 #'google_Scholar("heart rate",year_low = 1989, year_high = 2015,journal = "nature")

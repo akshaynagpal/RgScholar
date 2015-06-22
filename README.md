@@ -20,10 +20,10 @@ Search filters can also be applied to have a more focused search as shown in the
 
 ###Arguments
 
-`user_query` Search term(s) given by user separated by space
-`year_low`	 Lower limit of the year filter (optional). Default Value = NULL
-`year_high`	 Upper limit of the year filter (optional). Default Value = NULL
-`journal`	   Limit search to a specific journal (optional). Default value = NULL
+`user_query` Search term(s) given by user separated by space    
+`year_low`	 Lower limit of the year filter (optional). Default Value = NULL    
+`year_high`	 Upper limit of the year filter (optional). Default Value = NULL    
+`journal`	   Limit search to a specific journal (optional). Default value = NULL    
 
 
 ###Return Value

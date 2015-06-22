@@ -15,7 +15,7 @@ library(rvest)
 google_Scholar <- function(user_query,year_low=NULL,year_high=NULL,journal=NULL){
   user_query_CLEAN <- gsub("^ *|(?<= ) | *$", "", tolower(user_query), perl=T)  #removing multiple spaces
   user_query_for_URL <- gsub(" ","+",user_query_CLEAN)        #replacing space with + for URL
-  base_URL <- "https://scholar.google.co.in/scholar?as_vis=1&hl=en&q="
+  base_URL <- "https://scholar.google.co.in/scholar?as_vis=1&hl=en&num=20&q="
   query_URL <- paste(base_URL,user_query_for_URL,sep="")
   
   if(!is.null(journal)){

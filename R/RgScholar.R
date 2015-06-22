@@ -25,13 +25,13 @@ google_Scholar <- function(user_query,year_low=NULL,year_high=NULL,journal=NULL)
   }
   
   if(!is.null(year_low)){
-    query_URL <- paste(query_URL,"&as_ylo=",year_low,sep = "")
+    query_URL <- paste(query_URL,"&as_ylo=",gsub(" ","",year_low),sep = "")
   }
   
   if(!is.null(year_high)){
-    query_URL <- paste(query_URL,"&as_yhi=",year_high,sep="")
+    query_URL <- paste(query_URL,"&as_yhi=",gsub(" ","",year_high),sep = "")
   }
-  print(query_URL)
+  print(paste("Query URL generated:",query_URL))
   HTML_from_query_URL <- read_html(query_URL)
   # getting titles
   getTitles<- HTML_from_query_URL %>%

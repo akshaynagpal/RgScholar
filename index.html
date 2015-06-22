@@ -19,10 +19,73 @@
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="rgscholar" class="anchor" href="#rgscholar" aria-hidden="true"><span class="octicon octicon-link"></span></a>RgScholar</h1>
+      <p>API to search Google Scholar for research papers based on user input and search filters.</p>
 
-<p>Google Scholar API in R</p>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p><code>&gt; library(devtools)</code>
+<code>&gt; install_github('akshaynagpal/rgscholar')</code>
+<code>&gt; library(RgScholar)</code> </p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>It can be used simply by specifying the query as shown below:</p>
+
+<p><code>query_1 &lt;- google_Scholar("heart rate")</code> </p>
+
+<p>Search filters can also be applied to have a more focused search as shown in the below query which searches Google Scholar for research papers containing the terms "heart rate", published in journal <em>Nature</em> between the years <em>1989</em> and <em>2015</em></p>
+
+<p><code>query_2 &lt;- google_Scholar("heart rate",year_low = 1989, year_high = 2015,journal = "nature")</code></p>
+
+<h3>
+<a id="arguments" class="anchor" href="#arguments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arguments</h3>
+
+<p><code>user_query</code> Search term(s) given by user separated by space<br>
+<code>year_low</code>   Lower limit of the year filter (optional). Default Value = NULL<br>
+<code>year_high</code>  Upper limit of the year filter (optional). Default Value = NULL<br>
+<code>journal</code>      Limit search to a specific journal (optional). Default value = NULL    </p>
+
+<h3>
+<a id="return-value" class="anchor" href="#return-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Return Value</h3>
+
+<p>An object of type <code>dataframe</code> having titles, links and short abstracts of the research papers matching <code>user_query</code></p>
+
+<h3>
+<a id="problems-and-errors" class="anchor" href="#problems-and-errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problems and Errors</h3>
+
+<p><code>&gt; library(rgscholar)</code>
+<code>Error in library(rgscholar) : there is no package called ‘rgscholar’</code></p>
+
+<p>The above error is because the name of the package is <code>RgScholar</code> (R and S are in uppercase)</p>
+
+<h2>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<blockquote>
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Akshay Nagpal (<a href="https://twitter.com/akshay2626">https://twitter.com/akshay2626</a>)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+</blockquote>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/akshaynagpal/RgScholar">Rgscholar</a> is maintained by <a href="https://github.com/akshaynagpal">akshaynagpal</a>.</span>

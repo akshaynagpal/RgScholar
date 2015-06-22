@@ -4,9 +4,9 @@ Google Scholar API in R
 API to search Google Scholar for research papers based on user input and search filters.
 
 ##Installation
-`> library(devtools)`
-`> install_github('akshaynagpal/rgscholar')`
-`> library(RgScholar)` 
+`> library(devtools)`    
+`> install_github('akshaynagpal/rgscholar')`    
+`> library(RgScholar)`     
 
 
 ##Usage
